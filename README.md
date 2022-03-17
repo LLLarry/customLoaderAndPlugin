@@ -170,7 +170,7 @@ npm run start
 npm run start
 ```
 
-![](./images/3bf5e5248c32d0644a88b292a9b8e09.png)
+![](https://gitee.com/larrykimi/noteimg/raw/master/webpack中自定义loader和plugin/3bf5e5248c32d0644a88b292a9b8e09.png)
 
 **使用style-loader将处理`css-loader`生成的js对象，并生成对应的style标签，将style标签挂载到页面上**
 
@@ -202,7 +202,7 @@ npm run start
 
 可以看到样式已经挂载到页面上了
 
-![](./images/ab94b10eb795a410dfd24b55171271b.png)
+![](https://gitee.com/larrykimi/noteimg/raw/master/webpack中自定义loader和plugin/ab94b10eb795a410dfd24b55171271b.png)
 
 我们如果不使用`style-loader`的情况下，是否能实现，将`css-loader`生成的js对象挂载到页面上？
 
@@ -244,7 +244,7 @@ document.head.appendChild(styleEle)
 ```
 
 可以看到，我们不使用`style-loader`，使用我们自己定义的标签也能实现将css内容挂载到页面上
-![](./images/ab94b10eb795a410dfd24b55171271b.png)
+![](https://gitee.com/larrykimi/noteimg/raw/master/webpack中自定义loader和plugin/ab94b10eb795a410dfd24b55171271b.png)
 
 ### 2.1、自定义css-loader
 
@@ -370,7 +370,7 @@ console.log(style)
 
 先运行下看下效果
 
-![](./images/85b8f383212b246c6059ae9a26b0b4f.png)
+![](https://gitee.com/larrykimi/noteimg/raw/master/webpack中自定义loader和plugin/85b8f383212b246c6059ae9a26b0b4f.png)
 
 可以看出我们自定义的loader能够正常工作并输出
 
@@ -455,7 +455,7 @@ module.exports = function (source) {
 }
 ```
 
-![](./images/aa0854ffbfe5c9040872151b1dd4b09.png)
+![](https://gitee.com/larrykimi/noteimg/raw/master/webpack中自定义loader和plugin/aa0854ffbfe5c9040872151b1dd4b09.png)
 
 
 
@@ -469,7 +469,7 @@ module.exports = function (source) {
 
 在上面的介绍中，我们知道插件需要插入到webpack编译的某个阶段，那到底有多少个编译阶段了，这就需要用到我们在之前的阅读源码的文章中了解到的webpack的常见阶段。
 
-![](./images/f1ba7705fa3d11a4d4909cb0c98bcc9.png)
+![](https://gitee.com/larrykimi/noteimg/raw/master/webpack中自定义loader和plugin/f1ba7705fa3d11a4d4909cb0c98bcc9.png)
 
 插件原则上是可以作用于webpack编译的整个阶段。但是通常我们会在以下几个重要阶段进行插入：
 
@@ -776,7 +776,7 @@ module.exports = {
 
 我们先试下`yarn start`进行打包
 
-![](./images/b5a5c158281992a621a9cd5b078a9d9.png)
+![](https://gitee.com/larrykimi/noteimg/raw/master/webpack中自定义loader和plugin/b5a5c158281992a621a9cd5b078a9d9.png)
 
 可以看出，在页面的尾部输出了本地服务ip地址
 
@@ -784,4 +784,4 @@ module.exports = {
 
 当执行`yarn  build`时，本地并没有输出ip地址
 
-![](./images/121fdeb18193c97bd56adad8ef177ce.png)
+![](https://gitee.com/larrykimi/noteimg/raw/master/webpack中自定义loader和plugin/121fdeb18193c97bd56adad8ef177ce.png)
